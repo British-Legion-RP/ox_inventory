@@ -4,9 +4,16 @@ return {
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'burger', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'burger', price = 4 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 1 },
+			{ name = 'donut', price = 2 },
+			{ name = 'chocolate', price = 2 },
+			{ name = 'potnoodle', price = 1 },
+			{ name = 'crisps', price = 1 },
+			{ name = 'carrot_cake', price = 2 },
+			{ name = 'scratch_ticket', price = 5 },
+			{ name = 'scissors', price = 7 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -29,6 +36,9 @@ return {
 			{ loc = vec3(2678.29, 3279.94, 55.24), length = 0.6, width = 0.5, heading = 330.0, minZ = 55.24, maxZ = 55.64, distance = 1.5 },
 			{ loc = vec3(2557.19, 381.4, 108.62), length = 0.6, width = 0.5, heading = 0.0, minZ = 108.62, maxZ = 109.02, distance = 1.5 },
 			{ loc = vec3(373.13, 326.29, 103.57), length = 0.6, width = 0.5, heading = 345.0, minZ = 103.57, maxZ = 103.97, distance = 1.5 },
+			{ loc = vec3(-706.64, -913.69, 19.33), length = 0.6, width = 0.5, heading = 90.0, minZ = 19.33, maxZ = 19.73, distance = 1.5 },
+			{ loc = vec3(-47.20, -1757.67, 29.54), length = 0.6, width = 0.5, heading = 49.99, minZ = 29.54, maxZ = 29.94, distance = 1.5 },
+			{ loc = vec3(1164.21, -322.89, 69.32), length = 0.6, width = 0.5, heading = 100.0, minZ = 69.32, maxZ = 69.72, distance = 1.5 },
 		}
 	},
 
@@ -37,9 +47,15 @@ return {
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'burger', price = 15 },
+			{ name = 'beer', price = 4 },
+			{ name = 'whiskey', price = 13 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 1 },
+			{ name = 'chocolate', price = 4 },
+			{ name = 'crisps', price = 4 },
+			{ name = 'scratch_ticket', price = 5 },
+			{ name = 'pokemonboosterpack', price = 299 },
+			{ name = 'pokemonfolder', price = 249 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -57,6 +73,39 @@ return {
 			{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
 		}
 	},
+	
+	CoffeeLegion = {
+		name = 'Coffee Stall',
+		inventory = {
+			{ name = 'coffee', price = 3 },
+		}, model = {
+			`p_ld_coffee_vend_01`
+		}
+	},
+	
+	BurgerLegion = {
+		name = 'Burger Stall',
+		inventory = {
+			{ name = 'burger', price = 4 },
+			{ name = 'donut', price = 2 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 1 },
+		}, model = {
+			`prop_food_van_02`
+		}
+	},
+	
+	Vodafone = {
+		name = 'Vodafone',
+		inventory = {
+			{ name = 'phone', price = 500 },
+		}, locations = {
+			vec3(-657.19, -857.64, 24.5),
+		}, targets = {
+			{ loc = vec3(-656.42, -858.20, 24.62), length = 0.5, width = 0.5, heading = 0.0, minZ = 24.5, maxZ =24.8, distance = 1.5 },
+			{ loc = vec3(-657.91, -858.23, 24.62), length = 0.5, width = 0.5, heading = 0.0, minZ = 24.5, maxZ =24.8, distance = 1.5 },
+		}
+	},
 
 	YouTool = {
 		name = 'YouTool',
@@ -65,22 +114,37 @@ return {
 		}, inventory = {
 			{ name = 'lockpick', price = 10 }
 		}, locations = {
-			vec3(2748.0, 3473.0, 55.67),
-			vec3(342.99, -1298.26, 32.51)
+			--vec3(2748.0, 3473.0, 55.67),
+			--vec3(342.99, -1298.26, 32.51)
 		}, targets = {
-			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
+			--{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.6, maxZ = 56.0, distance = 3.0 }
 		}
 	},
 
+	PaletoDrugs = {
+		name = 'Bay Side Drugs',
+		inventory = {
+			{ name = 'chemicals', price = 10 },
+			{ name = 'plastic_bags', price = 2 },
+		}, locations = {
+			vec3(-172.456, 6386.812, 31.487),
+		}, targets = {
+			{ loc = vec3(-172.456, 6386.812, 31.487), length = 0.5, width = 0.5, heading = 150, minZ = 31.45, maxZ = 31.79, distance = 1.5 },
+		}
+	},
+
+	---[[
 	Ammunation = {
 		name = 'Ammunation',
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'WEAPON_KNUCKLE', price = 45 },
+			{ name = 'WEAPON_BAT', price = 39 },
+			{ name = 'WEAPON_KNIFE', price = 49 },
+			{ name = 'WEAPON_SWITCHBLADE', price = 69 },
+			--{ name = 'WEAPON_PISTOL', price = 4500, metadata = { registered = true } },
+			--{ name = 'ammo-9', price = 3, },
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -103,6 +167,7 @@ return {
 			{ loc = vec3(841.05, -1034.76, 28.31), length = 0.6, width = 0.5, heading = 360.0, minZ = 28.2, maxZ = 28.6, distance = 2.0 }
 		}
 	},
+	--]]
 
 	PoliceArmoury = {
 		name = 'Police Armoury',
@@ -110,25 +175,28 @@ return {
 		blip = {
 			id = 110, colour = 84, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+			{ name = 'ammo-9', price = 1, },
+			{ name = 'ammo-rifle', price = 1, },
+			{ name = 'ammo-shotgun', price = 1, },
+			{ name = 'WEAPON_FLASHLIGHT', price = 10 },
+			{ name = 'uvlight', price = 10, grade = 2 },
+			{ name = 'WEAPON_NIGHTSTICK', price = 5 },
+			{ name = 'WEAPON_COMBATPISTOL', price = 1, metadata = { registered = true, serial = 'POL' }, license = 'weapon' , grade = 1, currency = 'weaponticket' },
+			{ name = 'WEAPON_CARBINERIFLE', price = 1, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 1, currency = 'weaponticket' },
+			{ name = 'WEAPON_PUMPSHOTGUN', price = 1, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 1, currency = 'weaponticket' },
+			{ name = 'WEAPON_STUNGUN', price = 30, metadata = { registered = true, serial = 'POL' } },
+			{ name = 'armour', price = 30, },
 		}, locations = {
 			vec3(451.51, -979.44, 30.68)
 		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
+			{ loc = vec3(452.92, -980.18, 31.11), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.6, maxZ = 32.1, distance = 3.0 }
 		}
 	},
 
+	--[[
 	Medicine = {
 		name = 'Medicine Cabinet',
-		groups = {
-			['ambulance'] = 0
-		},
+		jobs = { ['ambulance'] = 0 },
 		blip = {
 			id = 403, colour = 69, scale = 0.8
 		}, inventory = {
@@ -137,33 +205,116 @@ return {
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
 		}, targets = {
-
+			--{ loc = vec3(306.3687, -601.5139, 43.28406), length = 0.5, width = 0.5, heading = 270.0, minZ = 43.2, maxZ = 43.6, distance = 3.0 }
+		}
+	},
+	--]]
+	
+	AutoParts = {
+		name = 'Auto Parts Shop',
+		blip = {
+			id = 643, colour = 62, scale = 0.8
+		}, inventory = {
+			{ name = 'oil', price = 40, },
+			{ name = 'transmission_oil', price = 30, },
+			{ name = 'tires', price = 200, },
+			{ name = 'semislick', price = 400, },
+			{ name = 'slick', price = 1000, },
+			{ name = 'brake_pads', price = 75, },
+			{ name = 'brake_discs', price = 100, },
+			{ name = 'brake_caliper', price = 150, },
+			{ name = 'race_brakes', price = 1000, },
+			{ name = 'shock_absorber', price = 120, },
+			{ name = 'springs', price = 60, },
+			{ name = 'susp', price = 100, },
+			{ name = 'susp1', price = 300, },
+			{ name = 'susp2', price = 500, },
+			{ name = 'susp3', price = 750, },
+			{ name = 'susp4', price = 1000, },
+			{ name = 'clutch', price = 150, },
+			{ name = 'gear', price = 110, },
+			{ name = 'air_filter', price = 25, },
+			{ name = 'fuel_filter', price = 45, },
+			{ name = 'spark_plugs', price = 50, },
+			{ name = 'serpentine_belt', price = 75, },
+			{ name = 'garett', price = 1000, },
+			{ name = 'nitrous', price = 2500, },
+			{ name = 'piston', price = 150, },
+			{ name = 'rod', price = 125, },
+			{ name = '2jz', price = 6000, },
+			{ name = 'k20a', price = 5000, },
+			{ name = 'mustangv8', price = 8000, },
+			{ name = 'rb26', price = 5000, },
+			{ name = 'fwd', price = 2000, },
+			{ name = 'rwd', price = 3500, },
+			{ name = 'awd', price = 4500, },
+			{ name = 'iron', price = 100 },
+			{ name = 'aluminum', price = 100 }
+		}, locations = {
+			vec3(331.9, -1107.37, 29.41)
+		}, targets = {
+			{ loc = vec3(333.41, -1106.13, 29.29), length = 0.5, width = 0.5, heading = 180.0, minZ = 29.2, maxZ = 29.6, distance = 3.0 }
 		}
 	},
 
 	BlackMarketArms = {
 		name = 'Black Market (Arms)',
 		inventory = {
-			{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
-			{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
-			{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
-			{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
-			{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
+			{ name = 'WEAPON_DAGGER', price = 500, metadata = { registered = false	}, currency = 'black_money'},
+			{ name = 'WEAPON_PISTOL', price = 8000, metadata = { registered = false }, currency = 'black_money'},
+			{ name = 'WEAPON_CERAMICPISTOL', price = 10000, metadata = { registered = false }, currency = 'black_money'},
+			{ name = 'ammo-9', price = 3, currency = 'black_money' },
+			--{ name = 'at_suppressor_light', price = 250, currency = 'black_money'},
+			--{ name = 'ammo-rifle', price = 3, currency = 'black_money'},
+			--{ name = 'ammo-rifle2', price = 3, currency = 'black_money'}
 		}, locations = {
 			vec3(309.09, -913.75, 56.46)
-		}, targets = {
-
+		}, model = {
+			`s_m_y_dockwork_01`
 		}
+--		targets = {
+--			{ loc = vec3(465.59, -3118.99, 6.07), length = 1.0, width = 1.0, heading = 208.0, minZ = 5.07, maxZ = 7.07, distance = 1.5 }
+--		}
 	},
 
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
 		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 1 },
 		},
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
 		}
-	}
+	},
+	
+	Sahunting = {
+		name = 'SA Hunting',
+		blip = {
+			id = 141, colour = 69, scale = 0.8
+		}, inventory = {
+			{ name = 'WEAPON_BOW', price = 1750 },
+			{ name = 'ammo-arrow', price = 4 },
+			{ name = 'WEAPON_MACHETE', price = 75 },
+			{ name = 'WEAPON_KNIFE', price = 49 },
+		}, locations = {
+			vec3(-774.45, 5603.32, 33.74),
+		}, targets = {
+			{ loc = vec3(-774.99, 5604.09, 33.86), length = 0.6, width = 0.6, heading = 233.75, minZ = 33.7, maxZ = 34.1, distance = 3.0 }
+		}
+	},
+	
+	Fishing = {
+		name = 'Fishing Supplies',
+		blip = {
+			id = 76, colour = 69, scale = 0.8
+		}, inventory = {
+			{ name = 'fishingrod', price = 150 },
+			{ name = 'legalbait', price = 4 },
+		}, locations = {
+			vec3(-1598.93, 5200.51, 4.50),
+		}, targets = {
+			{ loc = vec3(-1598.93, 5200.51, 4.50), length = 0.6, width = 0.6, heading = 114.40, minZ = 4.34, maxZ = 4.74, distance = 3.0 }
+		}
+	},
 }

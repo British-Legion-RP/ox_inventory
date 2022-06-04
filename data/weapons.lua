@@ -560,6 +560,13 @@ return {
 			weight = 2500,
 			durability = 0.1,
 		},
+		
+		['WEAPON_BOW'] = {
+			label = 'Bow',
+			weight = 2000,
+			durability = 0.5,
+			ammoname = 'ammo-arrow'
+		},
 
 	},
 
@@ -569,7 +576,7 @@ return {
 			weight = 120,
 			type = 'flashlight',
 			client = {
-				component = {`COMPONENT_AT_PI_FLSH`,`COMPONENT_AT_AR_FLSH`, `COMPONENT_AT_PI_FLSH_02`},
+				component = {`COMPONENT_AT_PI_FLSH`,`COMPONENT_AT_AR_FLSH`},
 				usetime = 2500
 			}
 		},
@@ -629,7 +636,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-				component = {`COMPONENT_SMG_CLIP_02`, `COMPONENT_SMG_MK2_CLIP_02`, `COMPONENT_ASSAULTSMG_CLIP_02`, `COMPONENT_MICROSMG_CLIP_02`, `COMPONENT_MINISMG_CLIP_02`, `COMPONENT_COMBATPDW_CLIP_02`, `COMPONENT_MACHINEPISTOL_CLIP_02`},
+				component = {`COMPONENT_SMG_CLIP_02`, `COMPONENT_SMG_MK2_CLIP_02`, `COMPONENT_ASSAULTSMG_CLIP_02`, `COMPONENT_MICROSMG_CLIP_02`, `COMPONENT_MINISMG_CLIP_02`, `COMPONENT_COMBATPDW_CLIP_02`, COMPONENT_MACHINEPISTOL_CLIP_02},
 				usetime = 2500
 			}
 		},
@@ -659,7 +666,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-				component = {`COMPONENT_MG_CLIP_02`, `COMPONENT_COMBATMG_CLIP_02`, `COMPONENT_GUSENBERG_CLIP_02`, `COMPONENT_COMBATMG_MK2_CLIP_02`},
+				component = {`COMPONENT_MG_CLIP_02`, `COMPONENT_COMBATMG_CLIP_02`, `COMPONENT_GUSENBERG_CLIP_02`, COMPONENT_COMBATMG_MK2_CLIP_02},
 				usetime = 2500
 			}
 		},
@@ -729,7 +736,7 @@ return {
 			type = 'sight',
 			weight = 280,
 			client = {
-				component = {`COMPONENT_AT_SCOPE_MEDIUM`, `COMPONENT_AT_SCOPE_MEDIUM_MK2`, `COMPONENT_AT_PI_RAIL_02`, `COMPONENT_AT_PI_RAIL`},
+				component = {`COMPONENT_AT_SCOPE_MEDIUM`, `COMPONENT_AT_SCOPE_MEDIUM_MK2`, `COMPONENT_AT_PI_RAIL_02`},
 				usetime = 2500
 			}
 		},
@@ -1049,6 +1056,11 @@ return {
 		['ammo-sniper'] = {
 			label = '7.62 NATO',
 			weight = 11,
+		},
+		
+		['ammo-arrow'] = {
+			label = 'Arrow',
+			weight = 150,
 		}
 	}
 }

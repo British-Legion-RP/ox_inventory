@@ -422,7 +422,7 @@ local function openNearbyInventory()
 	if canOpenInventory() then
 		local targetId, targetPed = Utils.GetClosestPlayer()
 
-		if targetId and (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
+		if targetId and (client.hasGroup(shared.police) or canOpenTarget(targetPed) or (currentWeapon and currentWeapon.name == 'WEAPON_KNIFE')) then
 			Utils.PlayAnim(2000, 'mp_common', 'givetake1_a', 1.0, 1.0, -1, 50, 0.0, 0, 0, 0)
 			client.openInventory('player', GetPlayerServerId(targetId))
 		end
@@ -624,7 +624,7 @@ local function registerCommands()
 
 	for i = 1, 5 do
 		local hotkey = ('hotkey%s'):format(i)
-		RegisterCommand(hotkey, function() if not invOpen then useSlot(i) end end)
+		RegisterCommand(hotkey, function() if not invOpen and not IsPedInAnyVehicle(PlayerPedId(), true) then useSlot(i) end end)
 		RegisterKeyMapping(hotkey, shared.locale('use_hotbar', i), 'keyboard', i)
 		TriggerEvent('chat:removeSuggestion', '/'..hotkey)
 	end

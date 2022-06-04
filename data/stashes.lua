@@ -1,5 +1,25 @@
 return {
 	{
+		coords = vec3(462.77, -1010.03, 36.56),
+		target = {
+			loc = vec3(462.77, -1010.03, 36.56),
+			length = 1.2,
+			width = 2.6,
+			heading = 0,
+			minZ = 34.93,
+			maxZ = 37.20,
+			label = 'Open boss locker'
+		},
+		name = 'policebosslocker',
+		label = 'Boss locker',
+		owner = false,
+		slots = 30,
+		weight = 70000,
+		groups = {['police'] = 5}
+	},
+	
+	
+	{
 		coords = vec3(452.3, -991.4, 30.7),
 		target = {
 			loc = vec3(451.25, -994.28, 30.69),
@@ -15,7 +35,7 @@ return {
 		owner = true,
 		slots = 70,
 		weight = 70000,
-		groups = shared.police
+		groups = {[shared.police] = 0}
 	},
 
 	{
@@ -35,5 +55,24 @@ return {
 		slots = 70,
 		weight = 70000,
 		groups = {['ambulance'] = 0}
+	},
+	
+	{
+		coords = vec3(841.79, -980.41, 31.84),
+		target = {
+			loc = vec3(841.79, -980.41, 31.84),
+			length = 1.2,
+			width = 1.2,
+			heading = 310,
+			minZ = 31.08,
+			maxZ = 32.58,
+			label = 'Open mechanic storage'
+		},
+		name = 'mechanicstock',
+		label = 'Mechanic Stock',
+		owner = false,
+		slots = 30,
+		weight = 150000,
+		groups = {['mechanic'] = 0}
 	},
 }
