@@ -291,7 +291,7 @@ end
 local function randomLoot(loot)
 	local items = {}
 	local size = #loot
-	for i = 1, math.random(0, 3) do
+	for i = 1, math.random(1, 3) do
 		if i > size then return items end
 		local item = randomItem(loot, items, size)
 		if math.random(1, 100) <= (item[4] or 80) then
@@ -300,6 +300,9 @@ local function randomLoot(loot)
 				items[#items+1] = {item[1], count}
 			end
 		end
+	end
+	if #item == 0 then
+		items[#items+1] = {loot[1],1}
 	end
 	return items
 end
